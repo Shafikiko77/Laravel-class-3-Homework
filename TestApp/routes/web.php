@@ -20,6 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [PostController::class, 'addPost'])->name('addpost');
 Route::get('/all-post', [PostController::class, 'allPost'])->name('allpost');
 Route::post('/store', [PostController::class, 'storePost'])->name('store');
+Route::get('/delete/{id}', [PostController::class, 'deletePost'])->name('delete');
+Route::get('/edit/{id}', [PostController::class, 'editPost'])->name('edit');
 
 
 
